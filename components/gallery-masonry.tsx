@@ -85,6 +85,7 @@ export function GalleryMasonry({ frames, tags }: Props) {
                 width={f.asset.width ?? 1200}
                 height={f.asset.height ?? 1500}
                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                priority={i < 2}
                 className="h-auto w-full transition-transform duration-[800ms] ease-[var(--ease-settle)] hover:scale-[1.02]"
               />
               {f.tag && (

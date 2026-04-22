@@ -25,7 +25,13 @@ export function WorkGrid({ galleries, variant = "home" }: Props) {
             href={`/work/${g.slug}`}
             className="group relative block overflow-hidden border border-[color:var(--color-rule)] bg-[color:var(--color-bg-elev)]"
           >
-            <div className={variant === "full" ? "aspect-[4/5]" : "aspect-[4/3]"}>
+            <div
+              className={
+                variant === "full"
+                  ? "relative aspect-[4/5]"
+                  : "relative aspect-[4/3]"
+              }
+            >
               <Image
                 src={g.coverImage.src}
                 alt={g.coverImage.alt}
