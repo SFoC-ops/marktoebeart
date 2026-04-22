@@ -15,7 +15,7 @@ export default function TypeTestPage() {
           Unica One — display
         </h2>
         <p className="font-display text-6xl uppercase leading-none md:text-9xl">
-          Not <span className="accent-italic">bound</span> by style.
+          Not <span className="accent-italic strike-in">bound</span> by style<span className="heavy-stop">.</span>
         </p>
       </section>
 

@@ -15,7 +15,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-[var(--container-site)] gap-10 px-5 py-16 md:grid-cols-4 md:px-10 md:py-24">
         <div className="md:col-span-2">
           <p className="font-display text-3xl uppercase leading-none md:text-5xl">
-            Let&apos;s make <span className="accent-italic">something.</span>
+            Let&apos;s make <span className="accent-italic strike-in">something.</span>
           </p>
           <p className="mt-4 max-w-md text-[color:var(--color-ink-dim)]">
             Festivals, performance, portraits, brand, travel, behind-the-scenes. Based in the

@@ -67,6 +67,77 @@
     color: var(--color-accent);
   }
 
+  /**
+   * Signature full-stop for display headings. Per the Direction C prototype:
+   * swap out of Unica One into Archivo Black Italic so the period reads as
+   * a heavy design element rather than a typographic afterthought. Inherits
+   * the surrounding text colour. A touch of negative left margin pulls it
+   * close to the final letter since Archivo's sidebearing is wider.
+   */
+  .heavy-stop {
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: none;
+    margin-left: 0.1em;
+    letter-spacing: 0;
+  }
+
+  /**
+   * Animated strike-through for accent words. Opt-in (not every pink word
+   * should read as "struck" — e.g. the footer "something." would flip
+   * meaning). Combine with .accent-italic on words where the strike adds
+   * editorial punch (e.g. the "NOT ~~bound~~ BY STYLE" hero).
+   */
+  .strike-in {
+    position: relative;
+    display: inline-block;
+  }
+  .strike-in::after {
+    content: "";
+    position: absolute;
+    left: -0.08em;
+    right: -0.08em;
+    top: 52%;
+    height: 0.09em;
+    background: currentColor;
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: strike-in-draw 900ms var(--ease-settle) 700ms forwards;
+    pointer-events: none;
+  }
+  .strike-in:hover::after,
+  .strike-in:focus-visible::after {
+    animation: strike-in-retract 450ms var(--ease-settle) forwards;
+  }
+
+  @keyframes strike-in-draw {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes strike-in-retract {
+    from {
+      transform: scaleX(1);
+      transform-origin: right center;
+    }
+    to {
+      transform: scaleX(0);
+      transform-origin: right center;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strike-in::after {
+    animation: none !important;
+    transform: scaleX(1);
+  }
+
   /* Skip-to-content link — visible on focus only */
   .skip-link {
     position: absolute;
