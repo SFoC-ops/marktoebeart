@@ -73,29 +73,6 @@ export default async function HomePage() {
           />
         </section>
       )}
-
-      <section className="relative overflow-hidden border-t border-[color:var(--color-rule)]">
-        <div className="mx-auto flex max-w-[var(--container-site)] flex-col items-start gap-10 px-5 py-24 md:px-10 md:py-40">
-          <h2 className="font-display text-5xl uppercase leading-[0.92] md:text-9xl">
-            Let&apos;s make <span className="accent-italic strike-in">something</span>
-            <span className="heavy-stop">.</span>
-          </h2>
-          <div className="flex flex-col gap-3 font-mono text-xs uppercase tracking-[0.22em] md:flex-row md:gap-8">
-            <a
-              href="mailto:mtoebaertt@gmail.com"
-              className="border border-[color:var(--color-ink)] px-6 py-4 transition-colors hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
-            >
-              mtoebaertt@gmail.com →
-            </a>
-            <Link
-              href="/contact"
-              className="border border-[color:var(--color-rule)] px-6 py-4 transition-colors hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
-            >
-              Book a call →
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
