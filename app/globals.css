@@ -93,6 +93,18 @@
     position: relative;
     display: inline-block;
   }
+
+  /**
+   * When combined with .accent-italic, the word starts ink-coloured and
+   * tints into the magenta accent in sync with the strike sweep — reads
+   * as the strike "activating" the word rather than the word arriving
+   * pre-coloured. Timings match the strike draw exactly.
+   */
+  .accent-italic.strike-in {
+    color: var(--color-ink);
+    animation: strike-in-tint 900ms var(--ease-settle) 700ms forwards;
+  }
+
   .strike-in::after {
     content: "";
     position: absolute;
@@ -100,7 +112,7 @@
     right: -0.08em;
     top: 52%;
     height: 0.09em;
-    background: currentColor;
+    background: var(--color-accent);
     transform-origin: left center;
     transform: scaleX(0);
     animation: strike-in-draw 900ms var(--ease-settle) 700ms forwards;
@@ -130,12 +142,22 @@
       transform-origin: right center;
     }
   }
+
+  @keyframes strike-in-tint {
+    to {
+      color: var(--color-accent);
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .strike-in::after {
     animation: none !important;
     transform: scaleX(1);
+  }
+  .accent-italic.strike-in {
+    animation: none !important;
+    color: var(--color-accent);
   }
 
   /* Skip-to-content link — visible on focus only */
