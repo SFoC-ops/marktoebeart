@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colour tokens — locked per CLAUDE.md § Design Tokens */
+  --color-bg: #0a0a0a;
+  --color-bg-elev: #111111;
+  --color-ink: #f0ece4;
+  --color-ink-dim: #8a8479;
+  --color-ink-faint: #44423d;
+  --color-accent: #ff2e6b;
+  --color-accent-2: #ff6b1f;
+  --color-accent-3: #4ad9ff;
+  --color-rule: rgba(240, 236, 228, 0.08);
+
+  /* Font families exposed via next/font CSS variables */
+  --font-display: var(--font-unica-one);
+  --font-body: var(--font-archivo);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-archivo);
+
+  /* Motion */
+  --ease-settle: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Spatial */
+  --container-site: 1400px;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+    letter-spacing: 0.01em;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  .accent-italic {
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-accent);
+  }
+
+  /* Skip-to-content link — visible on focus only */
+  .skip-link {
+    position: absolute;
+    top: -100vh;
+    left: 1rem;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    z-index: 100;
+    border-radius: 4px;
+  }
+  .skip-link:focus-visible {
+    top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
