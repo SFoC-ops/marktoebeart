@@ -26,7 +26,7 @@ export function AboutPreview({ about }: Props) {
           About
         </p>
         <h2 className="mt-4 font-display text-4xl uppercase leading-[0.95] md:text-6xl">
-          A photographer without a <span className="accent-italic">comfortable</span> lane
+          A photographer without a <span className="accent-italic strike-in">comfortable</span> lane
           <span className="heavy-stop">.</span>
         </h2>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-[color:var(--color-ink-dim)] md:text-lg">

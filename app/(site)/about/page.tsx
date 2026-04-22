@@ -32,7 +32,7 @@ export default async function AboutPage() {
             About
           </p>
           <h1 className="mt-4 font-display text-5xl uppercase leading-[0.95] md:text-7xl">
-            A photographer without a <span className="accent-italic">comfortable</span> lane
+            A photographer without a <span className="accent-italic strike-in">comfortable</span> lane
             <span className="heavy-stop">.</span>
           </h1>
           <div className="mt-10 space-y-6 text-base leading-relaxed text-[color:var(--color-ink)] md:text-lg">
@@ -77,7 +77,7 @@ export default async function AboutPage() {
       <section className="mx-auto max-w-[var(--container-site)] px-5 pb-24 md:px-10 md:pb-40">
         <div className="flex flex-col items-start gap-8 border-t border-[color:var(--color-rule)] pt-12 md:pt-16">
           <h2 className="font-display text-4xl uppercase leading-[0.95] md:text-6xl">
-            Still taking new <span className="accent-italic">clients</span>
+            Still taking new <span className="accent-italic strike-in">clients</span>
             <span className="heavy-stop">.</span>
           </h2>
           <Link

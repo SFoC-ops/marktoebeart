@@ -36,7 +36,7 @@ export default async function HomePage() {
             <h2 className="mt-3 font-display text-4xl uppercase leading-[0.95] md:text-6xl">
               Ten years, one camera,
               <br />
-              <span className="accent-italic">no lane</span>
+              <span className="accent-italic strike-in">no lane</span>
               <span className="heavy-stop">.</span>
             </h2>
           </div>

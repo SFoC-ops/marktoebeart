@@ -18,7 +18,7 @@ export default async function WorkPage() {
           Work
         </p>
         <h1 className="mt-4 font-display text-5xl uppercase leading-[0.95] md:text-8xl">
-          Six lanes, one <span className="accent-italic">photographer</span>
+          Six lanes, one <span className="accent-italic strike-in">photographer</span>
           <span className="heavy-stop">.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-[color:var(--color-ink-dim)] md:text-lg">
