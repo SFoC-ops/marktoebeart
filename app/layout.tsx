@@ -37,9 +37,7 @@ export const metadata: Metadata = {
     siteName: "Mark Toebaert Media",
     locale: "en_CA",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  // Favicon is auto-wired from app/icon.svg via Next.js file conventions.
 };
 
 export default function RootLayout({
