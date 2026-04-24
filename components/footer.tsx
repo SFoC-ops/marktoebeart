@@ -78,7 +78,18 @@ export function Footer() {
 
       <div className="border-t border-[color:var(--color-rule)]">
         <div className="mx-auto flex max-w-[var(--container-site)] flex-col gap-2 px-5 py-6 text-xs text-[color:var(--color-ink-dim)] md:flex-row md:items-center md:justify-between md:px-10">
-          <p>© {new Date().getFullYear()} Mark Toebaert Media.</p>
+          <p>
+            © {new Date().getFullYear()} Mark Toebaert Media. Built by{" "}
+            <a
+              href="https://samjennings.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-[color:var(--color-accent)]"
+            >
+              samjennings.dev
+            </a>
+            .
+          </p>
           <p className="font-mono uppercase tracking-[0.18em]">Not bound by style.</p>
         </div>
       </div>
